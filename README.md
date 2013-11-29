@@ -4,7 +4,7 @@ This demo processes an order stream into various tables in Cassandra. There is a
 
 ### Schema Setup
 
-*** Note : This will drop the keyspace and create a new one. All existing data will be lost. ***
+** Note : This will drop the keyspace and create a new one. All existing data will be lost. **
 
 To create the a multi data center cluster with a standard Cassandra, Analytics and Solr set up run the following
 
