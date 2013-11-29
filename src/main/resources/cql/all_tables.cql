@@ -1,7 +1,3 @@
-DROP KEYSPACE order_management;
-
-CREATE KEYSPACE order_management WITH replication = {'class' : 'NetworkTopologyStrategy', 'Cassandra' : 1};
-
 use order_management;
 
 drop table product_orders_by_user;

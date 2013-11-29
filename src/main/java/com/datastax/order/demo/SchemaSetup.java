@@ -10,7 +10,7 @@ import com.datastax.order.demo.utils.FileUtils;
 
 public abstract class SchemaSetup {
 
-	private static final Logger LOG = Logger.getLogger(SchemaSetup.class);
+	static final Logger LOG = Logger.getLogger(SchemaSetup.class);
 
 	private Cluster cluster;
 	private Session session;
