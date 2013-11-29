@@ -88,6 +88,7 @@ public class ProcessAllQueryTables {
 			}
 
 			Map<String, Order> orders = new HashMap<String, Order>();
+			order.setOrderDate(new Date());
 			orders.put(orderId, order);
 
 			this.orderManagementDAO.insertMovingAverages(calculateMovingAverage(order,

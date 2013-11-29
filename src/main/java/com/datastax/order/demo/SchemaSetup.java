@@ -3,14 +3,18 @@ package com.datastax.order.demo;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.mortbay.log.Log;
 
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
+import com.datastax.driver.core.exceptions.InvalidQueryException;
 import com.datastax.order.demo.utils.FileUtils;
 
 public abstract class SchemaSetup {
 
 	static final Logger LOG = Logger.getLogger(SchemaSetup.class);
+	static String CREATE_KEYSPACE;
+	static String DROP_KEYSPACE;
 
 	private Cluster cluster;
 	private Session session;
@@ -24,7 +28,19 @@ public abstract class SchemaSetup {
 		cluster = Cluster.builder().addContactPoints(contactPointsStr.split(",")).build();
 		session = cluster.connect();
 	}
+	
+	void internalSetup() {
+		this.runAllowFail(DROP_KEYSPACE);
+		
+		//Sleep to allow for changes to be propagted.
+		sleep(1000);
 
+		Log.info("Running : " + CREATE_KEYSPACE);
+		this.run(CREATE_KEYSPACE);
+		
+		this.runfile();		
+	}
+	
 	void runfile() {
 		String readFileIntoString = FileUtils.readFileIntoString("cql/all_tables.cql");
 		
@@ -49,7 +65,7 @@ public abstract class SchemaSetup {
 	void runAllowFail(String cql) {
 		try {
 			run(cql);
-		} catch (Exception e) {
+		} catch (InvalidQueryException e) {
 			LOG.warn("Ignoring exception - " + e.getMessage());
 		}
 	}
