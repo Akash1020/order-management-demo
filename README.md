@@ -4,7 +4,7 @@ This demo processes an order stream into various tables in Cassandra. There is a
 
 #### Pre-requisites
 
-You will need a java runtime (prefably 7) along with maven 3 to run this demo. You will need to be comfortable installing and starting Cassandra and DSE (hadoop and solr nodes included). 
+You will need a java runtime (preferably 7) along with maven 3 to run this demo. You will need to be comfortable installing and starting Cassandra and DSE (hadoop and solr nodes included). 
 
 ### Schema Setup
 
