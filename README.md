@@ -9,20 +9,20 @@ You will need a java runtime (prefably 7) along with maven 3 to run this demo. Y
 ### Schema Setup
 
 **Note : This will drop the keyspace and create a new one. All existing data will be lost.**
+To specify contact points use the contactPoints command line parameter e.g. '-DcontactPoints=192.168.25.100,192.168.25.101'
+The contact points can take mulitple points in the IP,IP,IP (no spaces).
 
 To create the a multi data center cluster with a standard Cassandra, Analytics and Solr set up run the following
 
-    mvn clean compile exec:java -Dexec.mainClass="com.datastax.order.demo.SchemaSetupMulti" -DcontactPoints=192.168.25.1
+    mvn clean compile exec:java -Dexec.mainClass="com.datastax.order.demo.SchemaSetupMulti" 
 
 To create the a single node cluster with replication factor of 1 for standard localhost setup, run the following
 
-    mvn clean compile exec:java -Dexec.mainClass="com.datastax.order.demo.SchemaSetupSingle" -DcontactPoints=192.168.25.1
+    mvn clean compile exec:java -Dexec.mainClass="com.datastax.order.demo.SchemaSetupSingle"
 
 To start the order processor run the following
 
-    mvn clean compile exec:java -Dexec.mainClass="com.datastax.order.demo.Main" -DcontactPoints=192.168.25.1
-
-The contact points can take mulitple points in the IP,IP,IP (no spaces).
+    mvn clean compile exec:java -Dexec.mainClass="com.datastax.order.demo.Main"
 
 This will load the reference data for products, users and accounts and will start the order processor batching orders for insertion to Cassandra. It will also start the service to update the account balance at a regular interval. 
 
