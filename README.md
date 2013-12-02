@@ -41,7 +41,7 @@ For a demo there may be certain things that a client may want to see. Here is a 
 9. Using hive to insert aggregated data back into the cluster
 10. Running Solr queries against the cluster.
 
-You can tailor this according to the needs to the customer but the idea is to highlight the important features of Cassandra and how easy DSE makes it to integrate Hive and Solr.
+You can tailor this according to the needs of the customer but the idea is to highlight the important features of Cassandra and how easy DSE makes it to integrate Hive and Solr.
 
 ### Solr
 
