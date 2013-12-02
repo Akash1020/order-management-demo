@@ -7,7 +7,7 @@ public class SchemaSetupSingle extends SchemaSetup {
 		
 		DROP_KEYSPACE = "DROP KEYSPACE order_management";
 		CREATE_KEYSPACE = "CREATE KEYSPACE order_management WITH replication = "
-				+ "{'class' : 'NetworkTopologyStrategy', 'Cassandra' : 1}";
+				+ "{'class' : 'SimpleStrategy', 'replication_factor' : 1}";
 		
 		LOG.info ("Running Single Node DSE setup.");
 		
