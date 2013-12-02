@@ -9,8 +9,8 @@ import org.apache.log4j.Logger;
 
 import au.com.bytecode.opencsv.CSVReader;
 
+import com.datastax.demo.utils.FileUtils;
 import com.datastax.order.demo.objects.Product;
-import com.datastax.order.demo.utils.FileUtils;
 
 public class LoadProduct {
 

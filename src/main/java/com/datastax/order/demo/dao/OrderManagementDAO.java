@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 
+import com.datastax.demo.utils.QueryObjectMapper;
 import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.ConsistencyLevel;
@@ -40,7 +41,6 @@ import com.datastax.order.demo.queryobjects.ProductOrdersByUser;
 import com.datastax.order.demo.queryobjects.ProductOrdersByVendor;
 import com.datastax.order.demo.queryobjects.UsersByProduct;
 import com.datastax.order.demo.queryobjects.UsersByVendorProduct;
-import com.datastax.order.demo.utils.QueryObjectMapper;
 
 public class OrderManagementDAO {
 

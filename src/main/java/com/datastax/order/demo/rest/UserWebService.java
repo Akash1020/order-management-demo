@@ -8,11 +8,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.datastax.demo.utils.Col;
+import com.datastax.demo.utils.GoogleData;
 import com.datastax.order.demo.dao.OrderManagementDAO;
 import com.datastax.order.demo.queryobjects.ProductOrdersByDate;
 import com.datastax.order.demo.queryobjects.ProductOrdersByUser;
-import com.datastax.order.demo.utils.Col;
-import com.datastax.order.demo.utils.GoogleData;
 
 
 @Path("/users/")

@@ -1,4 +1,4 @@
-package com.datastax.order.demo.utils;
+package com.datastax.demo.utils;
 
 import com.datastax.driver.core.Row;
 import com.datastax.order.demo.MovingAverageObject;

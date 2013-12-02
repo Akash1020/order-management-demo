@@ -7,8 +7,8 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.datastax.demo.utils.FileUtils;
 import com.datastax.order.demo.objects.Account;
-import com.datastax.order.demo.utils.FileUtils;
 
 public class LoadAccount {
 	

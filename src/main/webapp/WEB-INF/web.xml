@@ -6,7 +6,7 @@
 	<display-name>Order Management Web Application</display-name>
 
 	<listener>
-   		<listener-class>com.datastax.bootcamp.Main</listener-class>
+   		<listener-class>com.datastax.order.demo.Main</listener-class>
 	</listener>
 
 	<servlet>
@@ -31,7 +31,7 @@
 	<!-- Charting -->
 	<servlet>
 		<servlet-name>DayBarChartServlet</servlet-name>
-		<servlet-class>com.datastax.bootcamp.servlet.DayBarChartServlet</servlet-class>
+		<servlet-class>com.datastax.order.demo.servlet.DayBarChartServlet</servlet-class>
 	</servlet>
  
 	<servlet-mapping>
@@ -42,7 +42,7 @@
 	<!-- Charting -->
 	<servlet>
 		<servlet-name>DayHourBarChartServlet</servlet-name>
-		<servlet-class>com.datastax.bootcamp.servlet.DayHourBarChartServlet</servlet-class>
+		<servlet-class>com.datastax.order.demo.servlet.DayHourBarChartServlet</servlet-class>
 	</servlet>
  
 	<servlet-mapping>
@@ -53,7 +53,7 @@
 	<!-- Charting -->
 	<servlet>
 		<servlet-name>DayMinuteBarChartServlet</servlet-name>
-		<servlet-class>com.datastax.bootcamp.servlet.DayMinuteBarChartServlet</servlet-class>
+		<servlet-class>com.datastax.order.demo.servlet.DayMinuteBarChartServlet</servlet-class>
 	</servlet>
  
 	<servlet-mapping>
@@ -64,7 +64,7 @@
 	<!-- Tables -->
 	<servlet>
 		<servlet-name>ProductOrderUserTableServlet</servlet-name>
-		<servlet-class>com.datastax.bootcamp.servlet.ProductOrderUserTableServlet</servlet-class>
+		<servlet-class>com.datastax.order.demo.servlet.ProductOrderUserTableServlet</servlet-class>
 	</servlet>
  
 	<servlet-mapping>
@@ -75,7 +75,7 @@
 	<!-- Tables -->
 	<servlet>
 		<servlet-name>ProductOrderVendorTableServlet</servlet-name>
-		<servlet-class>com.datastax.bootcamp.servlet.ProductOrderVendorTableServlet</servlet-class>
+		<servlet-class>com.datastax.order.demo.servlet.ProductOrderVendorTableServlet</servlet-class>
 	</servlet>
  
 	<servlet-mapping>
@@ -86,7 +86,7 @@
 	<!-- Dashboard -->
 	<servlet>
 		<servlet-name>DashboardServlet</servlet-name>
-		<servlet-class>com.datastax.bootcamp.servlet.DashboardServlet</servlet-class>
+		<servlet-class>com.datastax.order.demo.servlet.DashboardServlet</servlet-class>
 	</servlet>
  
 	<servlet-mapping>

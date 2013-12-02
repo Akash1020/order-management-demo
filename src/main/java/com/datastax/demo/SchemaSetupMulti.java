@@ -1,4 +1,4 @@
-package com.datastax.order.demo;
+package com.datastax.demo;
 
 
 public class SchemaSetupMulti extends SchemaSetup {

@@ -1,4 +1,4 @@
-package com.datastax.order.demo.utils;
+package com.datastax.demo.utils;
 
 public class RowCol{
 	public String v;

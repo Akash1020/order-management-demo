@@ -10,8 +10,8 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.datastax.demo.utils.FileUtils;
 import com.datastax.order.demo.objects.Order;
-import com.datastax.order.demo.utils.FileUtils;
 
 public class LoadOrder {
 	//Order example - O1, U4860, P335, 1, 2013-08-09 00:01:01

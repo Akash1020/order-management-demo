@@ -1,14 +1,14 @@
-package com.datastax.order.demo;
+package com.datastax.demo;
 
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.mortbay.log.Log;
 
+import com.datastax.demo.utils.FileUtils;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.InvalidQueryException;
-import com.datastax.order.demo.utils.FileUtils;
 
 public abstract class SchemaSetup {
 
@@ -31,7 +31,7 @@ public abstract class SchemaSetup {
 	
 	void internalSetup() {
 		this.runAllowFail(DROP_KEYSPACE);
-		
+			
 		//Sleep to allow for changes to be propagted.
 		sleep(1000);
 

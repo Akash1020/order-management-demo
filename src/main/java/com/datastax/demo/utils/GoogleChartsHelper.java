@@ -1,4 +1,4 @@
-package com.datastax.order.demo.utils;
+package com.datastax.demo.utils;
 
 import java.io.IOException;
 import java.util.ArrayList;

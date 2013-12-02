@@ -9,8 +9,8 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.datastax.demo.utils.FileUtils;
 import com.datastax.order.demo.objects.User;
-import com.datastax.order.demo.utils.FileUtils;
 
 public class LoadUser {
 
